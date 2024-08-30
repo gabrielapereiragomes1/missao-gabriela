@@ -1,4 +1,4 @@
-const caixaPrincípal = document .QMUETySelteror (".caixa-principal");
+const caixaPrincipal = document .querySelector (".caixa-principal");
 const caixaPerguntas = document.querySelector(".caixa-perguntas") ;
 const caixanlternativas = document.querySelector (".caixa-alternativas");
 const caixaResultado = document.querySelector (".caixa-resultado") ;
