@@ -21,7 +21,7 @@ enunciado: "Como você acredita que podemos combater o racismo na sociedade?",
   
      enunciado:"Como você pode ajudar a combater a disseminação de fake news, especialmente as que perpetuam o racismo?",
 alternativas: [
-{
+   {
 texto: "Verificando a veracidade das informações antes de compartilhar qualquer conteúdo, especialmente sobre temas sensíveis como racismo.",
 afirmacao: "afirmacao3"
 }
@@ -54,7 +54,9 @@ function mostraPergunta() {
   if (atual >= perguntas.length) {
 mostraResultado();
 return;
-  }
+
+}
+
 perguntaAtual = perguntas[atual];
 caixaPerguntas.textContent = perguntaAtual.enunciado;
 caixaAlternativas.textContent = "";
@@ -63,13 +65,14 @@ mostraAlternativas ();
 }
 
 function mostraAlternativas (){
-    for (const alternativa of perguntaAtual.Alternativas) {
-    const botãoAlternativa = document.createElement ("button");
+    for (const alternativa of perguntaAtual.alternativas) {
+    const botaoAlternativa = document.createElement ("button");
     botaoAlternativa.textContent = alternativa.texto;
     botaoAlternativa.addEventListener ("click", ()=> respostaSelecionada (alternativa));
     caixaAlternativas.appendChild(botaoAlternativa);
     }
 }
+
 function respostaSelecionada (opcaoSelecionada){
    const afirmacao = opcaoSelecionada.afirmacao;
    historiaFinal += afirmacao + " ";
